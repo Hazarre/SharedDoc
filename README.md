@@ -1,5 +1,8 @@
 # FluenceHackFun
-Create a shared document app with Fluence services, Self.ID and React. 
+Create a shared document app with [Fluence services](https://doc.fluence.dev/docs/), [Self.ID](https://developers.ceramic.network/reference/self-id/classes/web.SelfID/#authenticate) and React. Users can create, share and share files as well as ajust editing permission.
+
+### Youtube Demo
+https://youtu.be/IpWqufnPs58
 
 ### Client 
 The clients of this app have two roles: the owner and editors. 
@@ -10,7 +13,7 @@ Once a file is shared with a self.ID. It becomes a editor with power to read/wri
 
 
 ### Running the App 
-Download this directory. Inside this directory, connect to a ceramic node and run ```npm start```. 
+Download this directory. Inside this directory, [connect to a ceramic node](https://developers.ceramic.network/run/nodes/community-nodes/) and run ```npm install``` then```npm start```. You also need a metamask account for easy of use.
 To deploy your own version of the app, see sections below. 
 
 ### Fluence services 
@@ -20,7 +23,7 @@ peer id
 12D3KooWEFFCZnar1cUJQ3rMWjvPQg6yMV2aXWs2DkJNSRbduBWn
 
 service id
-8d123d97-8632-4ece-bdfa-1bc94ee45d99
+829128d8-3641-49eb-8f77-e3df5d04f808
 ```
 
 ```rust 
@@ -35,7 +38,7 @@ service SharedDoc:
 ```
 
 Aqua services can be found at ```aqua/shared_doc.aqua```. 
-Marine implementations can be found at ```marine/shared_doc```.
+Marine implementations can be found at ```marine/shared_doc```. Run ```./deploy.sh``` to deplot to a Fluence node. 
 
 
 #### Future functoinalities: 
