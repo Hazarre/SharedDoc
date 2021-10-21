@@ -1,0 +1,15 @@
+{
+    "logger_enabled": true,
+    "mem_pages_count": 1,
+    "name": "shared_doc",
+    "module": {
+      "wasi": {
+        "preopened_files": [
+          "./sites"
+        ],
+        "mapped_dirs": {
+          "sites": "./sites"
+        }
+      }
+    }
+  }

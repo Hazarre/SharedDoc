@@ -1,0 +1,11 @@
+modules_dir = "artifacts/"
+
+[[module]]
+    name = "shared_doc"
+    mem_pages_count = 1     
+    logger_enabled = true
+
+    [module.wasi]
+    preopened_files = ["./sites"]
+    # this is where files will be stored
+    mapped_dirs = { "sites" = "./sites" }

@@ -1,0 +1,62 @@
+
+import "@fluencelabs/aqua-lib/builtin.aqua"
+
+const PEER_ID ?= "12D3KooWEFFCZnar1cUJQ3rMWjvPQg6yMV2aXWs2DkJNSRbduBWn"
+const SERVICE_ID ?= "bf48419a-63b2-4dc7-972d-846f93d71c22"
+
+
+-- this sercive runs on Fluence node 
+service SharedDoc:
+  add_editor(doc: string, editor: string, self_id: string) -> bool
+  am_i_owner() -> bool
+  authenticate(filename: string, self_id: string) -> bool
+  create_doc(filename: string, self_id: string) -> bool
+  del_editor(doc: string, editor: string, self_id: string) -> bool
+  read_file(filename: string, editor: string) -> string
+  write_file(filename: string, editor: string, content: string) -> string
+
+
+-- aqua/browser wrappers 
+func addEditor(doc: string, editor: string, self_id: string) -> bool:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        res <- SharedDoc.add_editor(filename, self_id)
+    <- res
+
+func isOwner() -> bool:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.am_i_owner()
+    <- comp
+
+func authenticateTx(filename: string, self_id: string) -> bool:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.authenticate(filename: string, self_id: string)
+    <- comp
+
+func createDoc(filename: string, self_id: string) -> bool:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.create_doc(filename: string, self_id: string)
+    <- comp
+
+func delEditor(doc: string, editor: string, self_id: string) -> bool:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.del_editor(doc: string, editor: string, self_id: string)
+    <- comp
+
+func readFile(filename: string, editor: string) -> string:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.read_file(filename: string, self_id: string)
+    <- comp
+
+func writeFile(filename: string, editor: string, content: string) -> string:
+    on PEER_ID:
+        SharedDoc SERVICE_ID
+        comp <- SharedDoc.write_file(filename: string, editor: string, content: string)
+    <- comp
+
+

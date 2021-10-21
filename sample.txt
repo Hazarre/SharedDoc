@@ -1,0 +1,7 @@
+i 
+c shared_doc create_doc ["doc.txt", "id1"]
+c shared_doc read_file  ["doc.txt", "id2"]
+c shared_doc add_editor ["doc.txt", "id2", "id1"]
+c shared_doc read_file  ["doc.txt", "id2"]
+c shared_doc del_editor ["doc.txt", "id2", "id1"]
+c shared_doc read_file  ["doc.txt", "id2"]
