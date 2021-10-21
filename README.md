@@ -38,8 +38,10 @@ service SharedDoc:
 ```
 
 Aqua services can be found at ```aqua/shared_doc.aqua```. 
+
 Marine implementations can be found at ```marine/shared_doc```. Run ```./deploy.sh``` to deplot to a Fluence node. 
 
+React app have config files in the main directory and files in ```src/```
 
 #### Future functoinalities: 
  - Sharing with fine grained permission. 
