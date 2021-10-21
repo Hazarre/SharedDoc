@@ -1,4 +1,4 @@
-# FluenceHackFun
+# SharedDoc with Fluence and Self.ID
 Create a shared document app with [Fluence services](https://doc.fluence.dev/docs/), [Self.ID](https://developers.ceramic.network/reference/self-id/classes/web.SelfID/#authenticate) and React. Users can create, share and share files as well as ajust editing permission.
 
 ### Youtube Demo
