@@ -4,6 +4,8 @@ Create a shared document app with [Fluence services](https://doc.fluence.dev/doc
 ### Youtube Demo
 https://youtu.be/IpWqufnPs58
 
+![alt text](https://github.com/Hazarre/SharedDoc/demo.png)
+
 ### Client 
 The clients of this app have two roles: the owner and editors. 
 
